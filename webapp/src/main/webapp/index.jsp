@@ -1,8 +1,20 @@
-
-<h1> Welcome To New DevOps Training</h1>
-<h1> Welcome To Training</h1>
-<h2> You see this because you have successfully installed Tomcat and  </h2>
-<h3> Congratulations and keep learning. The IT world is yours</h3>
-<p1> Test if webook is working with push trigger. </p1>
-<p2> Add a new paragraph </p2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Greeting App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Personalized Greeting App</h1>
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+        <button onclick="displayGreeting()">Show Greeting</button>
+        <p id="greeting"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
