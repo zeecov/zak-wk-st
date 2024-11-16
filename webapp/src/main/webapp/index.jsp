@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Welcome to the Mobann DevOps App</h1>
-	<h2> If you see this, you are in the right place. Goodluck </h2>
+	<h2> If you see this, you have successfully completed DevOps1. Goodluck </h2>
         <label for="name">Enter your name:</label>
         <input type="text" id="name" placeholder="Your Name">
         <button onclick="displayGreeting()">Show Greeting</button>
