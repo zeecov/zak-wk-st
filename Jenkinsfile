@@ -36,7 +36,7 @@ pipeline {
             steps {
                 rtServer (
                     id: "jfrog",
-                    url: "http://35.179.181.216:8082/artifactory", 
+                    url: "http://35.176.16.122:8082/artifactory", 
                     credentialsId: "jfrog"
                 )
 
@@ -82,8 +82,8 @@ pipeline {
                   sshagent(['ssh_agent']) {
                        sh "chmod 400 mo-london-kp.pem" 
                        sh "ls -lah"
-                        sh "scp -i mo-london-kp.pem -o StrictHostKeyChecking=no dockerfile ubuntu@18.175.216.77:/home/ubuntu"
-                        sh "scp -i mo-london-kp.pem -o StrictHostKeyChecking=no push-2-dockerhub.yaml ubuntu@18.175.216.77:/home/ubuntu"
+                        sh "scp -i mo-london-kp.pem -o StrictHostKeyChecking=no dockerfile ubuntu@18.171.23.53:/home/ubuntu"
+                        sh "scp -i mo-london-kp.pem -o StrictHostKeyChecking=no push-2-dockerhub.yaml ubuntu@18.171.23.53:/home/ubuntu"
                     }
                 }
         } 
@@ -92,7 +92,7 @@ pipeline {
             
             steps {
                   sshagent(['ssh_agent']) {
-                        sh "ssh -i mo-london-kp.pem -o StrictHostKeyChecking=no ubuntu@18.175.216.77 -C \"ansible-playbook -vvv -e build_number=${BUILD_NUMBER} push-2-dockerhub.yaml\""       
+                        sh "ssh -i mo-london-kp.pem -o StrictHostKeyChecking=no ubuntu@18.171.23.53 -C \"ansible-playbook -vvv -e build_number=${BUILD_NUMBER} push-2-dockerhub.yaml\""       
                     }
                 }
         } 
@@ -101,7 +101,7 @@ pipeline {
             
             steps {
                   sshagent(['ssh_agent']) {
-                        sh "scp -i mo-london-kp.pem -o StrictHostKeyChecking=no deploy_service.yaml ubuntu@35.179.152.149:/home/ubuntu"
+                        sh "scp -i mo-london-kp.pem -o StrictHostKeyChecking=no deploy_service.yaml ubuntu@35.178.248.53:/home/ubuntu"
                         }
                 }
         } 
@@ -118,7 +118,7 @@ pipeline {
                   sshagent(['ssh_agent']) {
                         //sh "ssh -i mo-oregon-kp.pem -o StrictHostKeyChecking=no ubuntu@52.27.146.236 -C \"kubectl set image deployment/ranty customcontainer=mobanntechnologies/july-set:${BUILD_NUMBER}\"" 
                         //sh "ssh -i mo-oregon-kp.pem -o StrictHostKeyChecking=no ubuntu@18.135.243.72 -C \"kubectl delete deployment ranty && kubectl delete service ranty\""
-                        sh "ssh -i mo-london-kp.pem -o StrictHostKeyChecking=no ubuntu@35.179.152.149 -C \"kubectl apply -f deploy_service.yaml\""
+                        sh "ssh -i mo-london-kp.pem -o StrictHostKeyChecking=no ubuntu@35.178.248.53 -C \"kubectl apply -f deploy_service.yaml\""
                         //sh "ssh -i mo-oregon-kp.pem -o StrictHostKeyChecking=no ubuntu@52.27.146.236 -C \"kubectl apply -f service.yaml\""
                     }
                 }  

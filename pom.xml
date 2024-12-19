@@ -186,7 +186,7 @@
     <repository>
         <id>central</id>
         <name>ip-50-0-4-86.eu-west-2.compute.internal-releases</name>
-        <url>http://18.175.167.186:8082/artifactory/july24-libs-release-local</url>
+        <url>http://35.176.16.122:8082/artifactory/july24-libs-release-local</url>
     </repository>
 </distributionManagement>
 

@@ -5,7 +5,7 @@
   - name: Pull .war artifact from Artifactory
     become: true
     get_url:
-      url: http://35.179.181.216:8082/ui/repos/tree/General/july24-libs-release-local/com/mobanntechnologies/mobanntechnologies/1.0-RELEASE/mobanntechnologies-1.0-RELEASE.war
+      url: http://35.176.16.122:8082/ui/repos/tree/General/july24-libs-release-local/com/mobanntechnologies/mobanntechnologies/1.0-RELEASE/mobanntechnologies-1.0-RELEASE.war
       dest: /home/ubuntu
       url_username: admin
       url_password: Computer1!
