@@ -1,0 +1,5 @@
+#!
+Lauched project workstation 
+Date: 21/01/25
+Server PW: vmtech
+Stopped: Cloned remote repo, only
