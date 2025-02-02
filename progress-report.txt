@@ -29,5 +29,12 @@ xxx 01/02/2025 xxx
 - Browse <QA/Staging-publ-ip:8080>, successful
 
 xxx 02/02/2025 xxx
+- created ssh connection from jenkins user to QA/Staging Server
+- created ssh-server in jenkins GUI (under SYSTEM)
+- configure the project to user ssh-server to copy artifact from jenkins user home to QA/Staging server [under apache-tomcat webapps directory]
+- started tomcat and check browser <QA/Staging-publ-ip:8080>; successful
+- installed docker and added ubuntu to docker group,
+- restarted the system; $ sudo init 6
+- pulled tomcat, nginx and httpd images
 
 
