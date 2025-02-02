@@ -18,3 +18,16 @@ jenkins@ip-10-0-1-56:~/workspace/vmtech-greeting-app/webapp/target$
 Next is to set QA/Stagging Server
 pw: jenkins, & vmtech
 
+xxx 01/02/2025 xxx
+- lunched QA/Staging server
+- Installed java & created environment variable
+- Installed apache-tomcat & created environment variable
+- Changed root ownership to ubuntu user and group
+- Created ssh connection from workstation sever to QA/Staging Server
+- Secure copy the artifacts from workstation to QA/Staging Server
+- Started apache-tomcat
+- Browse <QA/Staging-publ-ip:8080>, successful
+
+xxx 02/02/2025 xxx
+
+
