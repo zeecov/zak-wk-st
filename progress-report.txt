@@ -1,21 +1,19 @@
-#!
-Lauched project workstation 
-Date: 21/01/25
-Server PW: vmtech
-Stopped: Cloned remote repo, only
-
-Installed Java 17
-Installed Maven
-Ran local build; $ mvn package
+xxx 21/01/2025 xxx
+- Lauched project workstation 
+- Server PW: vmtech
+- Cloned remote repo to local repo, only
+- Installed Java 17 and created environment variable
+- Installed Maven and created environment variable
+- Ran local build; $ mvn package; successful
 
 xxx 31/01/2025 xxx
-Installed jenkins using bash script
-Installed necessary plugins
-Created environment variable for JDK, GIT, MAVEN, etc
-Set-up project a free-style project
-Checked; this path for the artifacts
+- Installed jenkins using bash script
+- Installed necessary plugins
+- Created environment variable for JDK, GIT, MAVEN, etc
+- Set-up project a free-style project
+- Checked; this path for the artifacts
 jenkins@ip-10-0-1-56:~/workspace/vmtech-greeting-app/webapp/target$
-Next is to set QA/Stagging Server
+- Next is to set QA/Stagging Server
 pw: jenkins, & vmtech
 
 xxx 01/02/2025 xxx
@@ -37,4 +35,16 @@ xxx 02/02/2025 xxx
 - restarted the system; $ sudo init 6
 - pulled tomcat, nginx and httpd images
 
-
+xxx 04/02/2025 xxx
+- Ran containers using tomcat latest image
+- Checked if any service is using port 8080, $ sudo netstat -tnlp | grep :8080
+- Installed net-tools $ sudo apt install net-tools -y
+- Practised with docker commands; docker ps, docker ps -a, docker images, docker rmi <image-name>, docker stop <con-name>, docker rm <con-name>, docker run -d --name <your-con-name> -p <desired-port:tomcat-port> <image-name> etc
+- Exec into a runing container $ docker exec -it <con-name> /bin/bash
+- Copied webapps.list content ./* into webapps dir
+- Ran a single command to pulled image and at the same time give a runing container
+$ docker run -d --name <con-name> -p <desired-port:tomcat-port> tomcat:latest
+$ docker exec -it <con-name> /bin/bash
+# docker cp -r /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+- Set up a dockerfile
+  
